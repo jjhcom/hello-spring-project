@@ -1,12 +1,11 @@
 package com.example.hellospringproject.controller;
 
+import com.example.hellospringproject.domain.Hello;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
-
-import java.util.Random;
 
 @Controller
 public class HelloController {
@@ -37,27 +36,4 @@ public class HelloController {
         return hello;
     }
 
-    static class Hello {
-        private String name;
-
-        private String age;
-
-        public String getAge() {
-            return age;
-        }
-
-        public void setAge() {
-            Random random = new Random();
-            int ages = random.nextInt(100);
-            this.age = Integer.toString(ages);
-        }
-
-        public String getName() {
-            return name;
-        }
-
-        public void setName(String name) {
-            this.name = name;
-        }
-    }
 }
