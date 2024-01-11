@@ -6,8 +6,8 @@ import java.util.List;
 import java.util.Optional;
 
 public interface MemberRepository {
-    // ÀúÀå ±â´É, ¾ÆÀÌµğ·Î Á¶È¸ ±â´É,
-    // ÀÌ¸§À¸·Î Á¶È¸ ±â´É, ÀüÃ¼ Á¶È¸
+    // ì €ì¥ ê¸°ëŠ¥, ì•„ì´ë””ë¡œ ì¡°íšŒ ê¸°ëŠ¥,
+    // ì´ë¦„ìœ¼ë¡œ ì¡°íšŒ ê¸°ëŠ¥, ì „ì²´ ì¡°íšŒ
     Member save(Member member);
     Optional<Member> findById(Long id);
     Optional<Member> findByName(String name);

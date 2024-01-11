@@ -11,13 +11,13 @@ public class MemberService {
     private final MemberRepository memberRepository = new MemoryMemberRepository();
 
     /**
-     * È¸¿ø°¡ÀÔ
+     * íšŒì›ê°€ì…
      */
     public Long join(Member member) {
-        // °°Àº ÀÌ¸§ÀÌ ÀÖ´Â Áßº¹ È¸¿ø X
-        // Optional<Member> result = memberRepository.findbyName(member.getName()); // Ctrl+Alt+V·Î ¸®ÅÏ º¯¼ö ÀÚµ¿ »ı¼º
+        // ê°™ì€ ì´ë¦„ì´ ìˆëŠ” ì¤‘ë³µ íšŒì› X
+        // Optional<Member> result = memberRepository.findbyName(member.getName()); // Ctrl+Alt+Vë¡œ ë¦¬í„´ ë³€ìˆ˜ ìë™ ìƒì„±
         // result.ifPresent(m -> {~~~})
-        validateDuplicateMember(member); // Áßº¹ È¸¿ø °ËÁõ
+        validateDuplicateMember(member); // ì¤‘ë³µ íšŒì› ê²€ì¦
         memberRepository.save(member);
         return member.getId();
     }
@@ -25,7 +25,7 @@ public class MemberService {
     private void validateDuplicateMember(Member member) {
         memberRepository.findByName(member.getName())
                 .ifPresent(m->{
-                    throw new IllegalStateException("ÀÌ¹Ì Á¸ÀçÇÏ´Â È¸¿øÀÔ´Ï´Ù");
+                    throw new IllegalStateException("ì´ë¯¸ ì¡´ì¬í•˜ëŠ” íšŒì›ì…ë‹ˆë‹¤");
                 });
     }
 
