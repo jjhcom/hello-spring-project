@@ -4,6 +4,16 @@ public class Member {
     private Long id;
     private String name;
 
+    public String getNickname() {
+        return nickname;
+    }
+
+    public void setNickname(String nickname) {
+        this.nickname = nickname;
+    }
+
+    private String nickname;
+
     public String getName() {
         return name;
     }
