@@ -11,14 +11,14 @@ public class MemberForm {
     public void setName(String name) {
         this.name = name;
     }
+//
+//    public String getNickname() {
+//        return nickname;
+//    }
+//
+//    public void setNickname(String nickname) {
+//        this.nickname = nickname;
+//    }
 
-    public String getNickname() {
-        return nickname;
-    }
-
-    public void setNickname(String nickname) {
-        this.nickname = nickname;
-    }
-
-    private String nickname;
+//    private String nickname;
 }

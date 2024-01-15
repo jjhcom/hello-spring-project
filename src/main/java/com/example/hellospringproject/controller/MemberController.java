@@ -30,7 +30,7 @@ public class MemberController {
     public String create(MemberForm memberForm){
         Member member = new Member();
         member.setName(memberForm.getName());
-        member.setNickname(memberForm.getNickname());
+//        member.setNickname(memberForm.getNickname());
 
         memberService.join(member);
 
